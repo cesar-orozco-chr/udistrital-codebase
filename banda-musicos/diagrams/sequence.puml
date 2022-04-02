@@ -1,0 +1,13 @@
+@startuml
+entity Principal
+entity Banda
+collections Musico
+
+Principal -> Banda: instanciar
+Principal -> Banda: crear_banda
+Banda -> Musico: asignar_musico
+Banda -> Musico: asignar_instrumento
+Banda -> Afinador: afinar
+Banda -> Afinador: tocar
+Banda -> Musico: tocar
+@enduml
