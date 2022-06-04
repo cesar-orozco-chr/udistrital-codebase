@@ -1,0 +1,27 @@
+version: '3'
+services:
+  nginx:
+    image: nginx
+    ports:
+      - 8085:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    links:
+      - suma
+      - resta 
+      - multiplicacion
+      - division
+  suma:
+    build: ./suma
+
+  resta:
+    build: ./resta
+  
+  multiplicacion:
+    build: ./multiplicacion
+
+  division:
+    build: ./division
+
+
+  
